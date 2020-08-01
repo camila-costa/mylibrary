@@ -1,26 +1,13 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Menu from './components/Menu';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Menu />
     </div>
   );
+  // <a href="https://fontmeme.com/pt/fonte-de-super-mario/"><img src="https://fontmeme.com/permalink/200729/5204208a71952154874cb23dbfea5fc9.png" alt="fonte-de-super-mario" border="0"></a>
 }
 
 export default App;
