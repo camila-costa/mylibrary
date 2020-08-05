@@ -1,12 +1,14 @@
 import React from 'react';
 import { VideoCardGroupContainer, Title, ExtraLink } from './styles';
 import VideoCard from './components/VideoCard';
-import Slider, { SliderItem } from './components/Slider';
+import Slider, { SliderItem } from './components/Slider'
 
-function Carousel({
-  ignoreFirstVideo,
-  category,
-}) {
+interface Props {
+  ignoreFirstVideo: boolean,
+  category: any
+}
+
+const Carousel: React.FC<Props> = ({ ignoreFirstVideo, category }) => {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
   const categoryExtraLink = category.link_extra;
@@ -26,7 +28,7 @@ function Carousel({
         </>
       )}
       <Slider>
-        {videos.map((video, index) => {
+        {videos.map((video: any, index: any) => {
           if (ignoreFirstVideo && index === 0) {
             return null;
           }
