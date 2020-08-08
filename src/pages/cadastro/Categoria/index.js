@@ -32,7 +32,7 @@ function CadastroCategoria() {
   // ============
 
   useEffect(() => {
-    if(window.location.href.includes('localhost')) {
+    // if(window.location.href.includes('localhost')) {
       const isLocalhost = window.location.hostname.includes('localhost');
       const URL = isLocalhost ? 'http://localhost:8080/categorias' : 'https://thisismylibrary.herokuapp.com/categorias';
       fetch(URL)
@@ -44,7 +44,7 @@ function CadastroCategoria() {
         }
         throw new Error('Não foi possível pegar os dados');
        })
-    }    
+    // }    
   }, []);
 
   return (
