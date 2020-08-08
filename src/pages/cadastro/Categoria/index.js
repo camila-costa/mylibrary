@@ -33,7 +33,8 @@ function CadastroCategoria() {
 
   useEffect(() => {
     if(window.location.href.includes('localhost')) {
-      const URL = 'http://localhost:8080/categorias'; 
+      const isLocalhost = window.location.hostname.includes('localhost');
+      const URL = isLocalhost ? 'http://localhost:8080/categorias' : 'https://thisismylibrary.herokuapp.com/';
       fetch(URL)
        .then(async (respostaDoServer) =>{
         if(respostaDoServer.ok) {
